@@ -14,5 +14,18 @@
         tools:layout_editor_absoluteX="-78dp"
         tools:layout_editor_absoluteY="-16dp" />
 
+    <TextView
+        android:id="@+id/txtNoFavorite"
+        android:layout_width="347dp"
+        android:layout_height="162dp"
+        android:text="jhgj"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/rwTeamsFavorite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

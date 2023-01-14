@@ -27,7 +27,7 @@ class HomeActivity : AppCompatActivity() {
         }
         button_favoris.setOnClickListener{
 
-            startActivity(Intent(this,YoutubePlayer::class.java).apply {  })
+            startActivity(Intent(this,FavoriteActivity::class.java).apply {  })
         }
 
         button_incoming.setOnClickListener{

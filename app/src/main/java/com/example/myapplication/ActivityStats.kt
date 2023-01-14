@@ -139,7 +139,7 @@ class ActivityStats : AppCompatActivity(){
 
 
 
-                        val objTeams = Gson().fromJson(json, Array<PostStats>::class.java).toList()
+                        var objTeams = Gson().fromJson(json, Array<PostStats>::class.java).toList()
 
                         uiThread {
                             objTeams.forEach {
@@ -148,11 +148,22 @@ class ActivityStats : AppCompatActivity(){
                             }
                         }
 
+                                objTeams = objTeams.sortedWith{ a,b ->
+                                         val pointA = a.pts!!
+                                        val pointB = b.pts!!
+                                    pointB.compareTo(pointA)
+
+                                    }
+
+
+                        btnFragmentNone.backgroundTintList = ContextCompat.getColorStateList(this@ActivityStats,R.color.newColor)
+
                         btnFragment1.setOnClickListener{
 
 
                             it.backgroundTintList = ContextCompat.getColorStateList(this@ActivityStats,R.color.newColor)
                             btnFragment2.backgroundTintList = ContextCompat.getColorStateList(this@ActivityStats,R.color.ColorDefault)
+                            btnFragmentNone.backgroundTintList = ContextCompat.getColorStateList(this@ActivityStats,R.color.ColorDefault)
                             val fragment = Team1()
                             val bundle = Bundle()
                             bundle.putSerializable("objTeams", objTeams as Serializable)
@@ -172,6 +183,7 @@ class ActivityStats : AppCompatActivity(){
                         btnFragment2.setOnClickListener{
                             it.backgroundTintList = ContextCompat.getColorStateList(this@ActivityStats,R.color.newColor)
                             btnFragment1.backgroundTintList = ContextCompat.getColorStateList(this@ActivityStats,R.color.ColorDefault)
+                            btnFragmentNone.backgroundTintList = ContextCompat.getColorStateList(this@ActivityStats,R.color.ColorDefault)
                             fragmentManager.popBackStack()
                             val fragment2 = Team2()
                             val bundle = Bundle()
@@ -189,7 +201,11 @@ class ActivityStats : AppCompatActivity(){
                         }
 
                         btnFragmentNone.setOnClickListener{
+                            it.backgroundTintList = ContextCompat.getColorStateList(this@ActivityStats,R.color.newColor)
+                            btnFragment1.backgroundTintList = ContextCompat.getColorStateList(this@ActivityStats,R.color.ColorDefault)
+                            btnFragment2.backgroundTintList = ContextCompat.getColorStateList(this@ActivityStats,R.color.ColorDefault)
                             fragmentManager.popBackStackImmediate()
+
                         }
 
 

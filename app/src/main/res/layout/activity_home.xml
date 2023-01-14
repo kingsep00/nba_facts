@@ -13,14 +13,14 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="157dp"
         android:layout_height="38dp"
+        android:backgroundTint="#F0EFF1"
         android:text="Résultats"
-        android:textColor="@color/white"
 
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
-        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.922" />
 
@@ -29,12 +29,13 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="159dp"
         android:layout_height="38dp"
+        android:backgroundTint="#AE1616"
         android:shadowColor="@color/black"
         android:text="Favoris"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
@@ -44,25 +45,24 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="159dp"
         android:layout_height="38dp"
+        android:backgroundTint="#3F51B5"
         android:shadowColor="@color/black"
         android:text="Match A venir"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864" />
+        app:layout_constraintVertical_bias="0.867" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="519dp"
         android:layout_height="143dp"
-
-        android:background="#90000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintHorizontal_bias="0.351"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
